@@ -20,12 +20,18 @@ $INCLUDE /var/lib/bind/db.saulgitanoadmin.com
 PC10	IN	A	172.17.14.12
 	IN      A       172.17.15.11
 
+router	IN	CNAME	PC10
+
 ; Servidores DNS
 PC11    IN      A       172.17.15.12
+dns1	IN	CNAME	PC11
 PC12    IN      A       172.17.15.14
+dns2	IN	CNAME	PC12
 
 servidorimpresion IN A	172.17.15.13
 
 ; Servidores de la red 172.17.14.0/24
 PC14.saulgitano.com.    IN      A       172.17.14.1
+www	IN	CNAME	PC14
+ftp	IN	CNAME	PC14
 PC15    IN      A       172.17.14.1
