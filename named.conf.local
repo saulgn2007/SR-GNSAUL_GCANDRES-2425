@@ -11,3 +11,19 @@ zone "saulgitano.com"
 	type master;
 	file "/var/lib/bind/db.saulgitano.com";
 };
+
+// Zonas inversas
+
+// Red No1: 172.17.15.0/24
+zone "15.17.172.in-addr.arpa"
+{
+	type master;
+	file "/var/lib/bind/db.172.17.15";
+};
+
+// Red No2: 172.17.14.0/24
+zone "14.17.172.in-addr.arpa"
+{
+        type master;
+        file "/var/lib/bind/db.172.17.14";
+};
